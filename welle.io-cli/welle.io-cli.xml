@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>welle.io-cli</Name>
+  <Repository>freakern/welle.io</Repository>
+  <Registry>https://hub.docker.com/r/freakern/welle.io</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/albrechtl/welle.io#welle-cli</Project>
+  <Overview>welle.io is an open source DAB and DAB+ software defined radio (SDR) with support for rtl-sdr (RTL2832U) and airspy.</Overview>
+  <Category>MediaServer:Music</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://www.welle.io/assets/img/favicon-32x32.png</Icon>
+  <ExtraParams/>
+  <PostArgs>-F rtl_sdr -w 8000</PostArgs>
+  <CPUset/>
+  <DateInstalled>1675594078</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="The RTL2832U or other compatible device" Target="" Default="" Mode="" Description="Open a Terminal, type 'lsusb' and hit enter. Search for your device. The path here is supposed to be like this: /dev/bus/usb/[Bus]/[Device] eg.: /dev/bus/usb/001/014" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb/001/014</Config>
+  <Config Name="Streaming Port" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+</Container>
