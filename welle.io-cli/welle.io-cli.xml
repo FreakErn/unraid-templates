@@ -17,10 +17,10 @@
   <ExtraParams/>
   <PostArgs>-F rtl_sdr -w 8000</PostArgs>
   <CPUset/>
-  <DateInstalled>1675594078</DateInstalled>
+  <DateInstalled>1675766632</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="The RTL2832U or other compatible device" Target="" Default="" Mode="" Description="Open a Terminal, type 'lsusb' and hit enter. Search for your device. The path here is supposed to be like this: /dev/bus/usb/[Bus]/[Device] eg.: /dev/bus/usb/001/014" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb/001/014</Config>
   <Config Name="Streaming Port" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="USB bus folder (For automatically selection of the RTL2832U)" Target="/dev/bus/usb" Default="/dev/bus/usb" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
 </Container>
