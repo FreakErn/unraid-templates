@@ -17,10 +17,10 @@
   <ExtraParams/>
   <PostArgs>-F rtl_sdr -w 8000</PostArgs>
   <CPUset/>
-  <DateInstalled>1675766632</DateInstalled>
+  <DateInstalled>1675850525</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
   <Config Name="Streaming Port" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
-  <Config Name="USB bus folder (For automatically selection of the RTL2832U)" Target="/dev/bus/usb" Default="/dev/bus/usb" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
+  <Config Name="USB bus folder (For automatically selection of the RTL2832U)" Target="" Default="" Mode="" Description="You could define here a specific device but when you replug the device the path will change and the container can not start. Keep this in mind." Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
 </Container>
