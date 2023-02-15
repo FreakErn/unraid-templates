@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/134863-support-freakern-welleio-cli/</Support>
   <Project>https://github.com/albrechtl/welle.io#welle-cli</Project>
   <Overview>welle.io is an open source DAB and DAB+ software defined radio (SDR) with support for rtl-sdr (RTL2832U) and airspy.</Overview>
   <Category>MediaServer:Music</Category>
@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs>-F rtl_sdr -w 8000</PostArgs>
   <CPUset/>
-  <DateInstalled>1675850525</DateInstalled>
+  <DateInstalled>1676494349</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
