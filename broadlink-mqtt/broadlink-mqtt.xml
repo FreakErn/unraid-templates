@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Broadlink MQTT</Name>
+  <Repository>dmitriy/broadlink-mqtt</Repository>
+  <Registry>https://hub.docker.com/r/dmitriy/broadlink-mqtt</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/eschava/broadlink-mqtt</Project>
+  <Overview>MQTT commands to control IR/RF&#xD;
+Recording (IR or RF)&#xD;
+To record new command just send record message for IR command or recordrf for RF command to the topic broadlink/COMMAND_ID,&#xD;
+where COMMAND_ID is any identifier that can be used for file name (slashes are also allowed)&#xD;
+&#xD;
+NOTE: It seems that Python3 is a must for recording RF signals&#xD;
+&#xD;
+Example: to record power button for Samsung TV send&#xD;
+record -&amp;gt; broadlink/tv/samsung/power&#xD;
+and recorded interpretation of IR signal will be saved to file commands/tv/samsung/power&#xD;
+&#xD;
+Replay&#xD;
+To replay previously recorded command send replay message to the topic broadlink/COMMAND_ID,&#xD;
+where COMMAND_ID is identifier if the command&#xD;
+Example: to replay power button for Samsung TV send&#xD;
+replay -&amp;gt; broadlink/tv/samsung/power&#xD;
+and saved interpretation of IR signal will be replayed from file commands/tv/samsung/power&#xD;
+&#xD;
+Another format for replaying recorded command is using file name as a message and folder as MQTT topic.&#xD;
+Example: to replay power button for Samsung TV send&#xD;
+power -&amp;gt; broadlink/tv/samsung&#xD;
+and saved interpretation of IR signal will be replayed from file commands/tv/samsung/power&#xD;
+&#xD;
+Smart mode&#xD;
+Smart mode means that if file with command doesn't exist it will be recorded.&#xD;
+Every next execution of the command will replay it.&#xD;
+This mode is very convenient for home automation systems.&#xD;
+To start smart mode need to send auto for IR command or autorf for RF command to the command topic&#xD;
+Example:&#xD;
+first time: auto -&amp;gt; broadlink/tv/samsung/power records command&#xD;
+every next time: auto -&amp;gt; broadlink/tv/samsung/power replays command&#xD;
+&#xD;
+Macros&#xD;
+Macro command sends several IR signals for single MQTT message.&#xD;
+To start macros execution send macro message to the topic broadlink/MACRO_ID,&#xD;
+where MACRO_ID is a path to scenario file in macros/ folder.&#xD;
+Alternative way of sending macro command is sending MACRO_ID message to the broadlink/macro topic.&#xD;
+&#xD;
+Macros scenario file could contain:&#xD;
+&#xD;
+IR commands (same as COMMAND_ID in replay mode)&#xD;
+pause instructions (pause DELAY_IN_MILLISECONDS)&#xD;
+comments (lines started with #)</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686302940</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="MQTT Host" Target="MQTT_SERVER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.178.209</Config>
+  <Config Name="Broadlink Remote Device IP" Target="DEVICE_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.178.203</Config>
+  <Config Name="Broadlink Remote Device Mac" Target="DEVICE_MAC" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">34:EA:34:E3:AF:5B</Config>
+  <Config Name="Broadlink configuration Folder" Target="/opt/broadlink-mqtt/conf" Default="/mnt/user/appdata/broadlink-mqtt/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/broadlink-mqtt/config</Config>
+  <Config Name="Broadlink Commands Folder" Target="/opt/broadlink-mqtt/commands/" Default="/mnt/user/appdata/broadlink-mqtt/commands" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/broadlink-mqtt/commands</Config>
+</Container>
