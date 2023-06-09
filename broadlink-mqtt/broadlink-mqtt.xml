@@ -55,7 +55,7 @@ comments (lines started with #)</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://github.com/FreakErn/unraid-templates/blob/9da38c80126f737783408ed4322ea66ded60a7ca/broadlink-mqtt/logo.jpeg<Icon/>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
