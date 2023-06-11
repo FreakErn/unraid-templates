@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/140281-support-freakern-broadlink-mqtt-ir-bridge/<Support/>
   <Project>https://github.com/eschava/broadlink-mqtt</Project>
   <Overview>A tool to send MQTT commands to control Infrared Devices.&#xD;
 &#xD;
@@ -24,7 +24,7 @@ For additional configuration you can create a custom.conf file, with additional 
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1686474817</DateInstalled>
+  <DateInstalled>1686474917</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
