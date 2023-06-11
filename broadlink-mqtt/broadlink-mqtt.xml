@@ -32,7 +32,7 @@ For additional configuration you can create a custom.conf file, with additional 
   <Config Name="MQTT Port" Target="MQTT_PORT" Default="1883" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
   <Config Name="MQTT User" Target="MQTT_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="MQTT Password" Target="MQTT_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="MQTT Topic" Target="MQTT_TOPIC_PREFIX" Default="broadlink" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">broadlink</Config>
+  <Config Name="MQTT Topic" Target="MQTT_TOPIC_PREFIX" Default="broadlink/" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">broadlink/</Config>
   <Config Name="Broadlink Remote Device IP" Target="DEVICE_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.60</Config>
   <Config Name="Broadlink Remote Device Mac" Target="DEVICE_MAC" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">34:AA:FF:CC:D5:68</Config>
   <Config Name="Broadlink Commands Folder" Target="/app/commands/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/broadlink-mqtt/commands</Config>
