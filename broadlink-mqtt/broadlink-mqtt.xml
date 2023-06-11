@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Broadlink MQTT</Name>
+  <Name>Broadlink_MQTT_IR-Bridge</Name>
   <Repository>dmitriy/broadlink-mqtt</Repository>
   <Registry>https://hub.docker.com/r/dmitriy/broadlink-mqtt</Registry>
   <Network>bridge</Network>
@@ -11,12 +11,12 @@
   <Project>https://github.com/eschava/broadlink-mqtt</Project>
   <Overview>A tool to send MQTT commands to control Infrared Devices.&#xD;
 &#xD;
-Just simply get a cheap broadlink rm mini 3, configure it with the broadlink e-control app, get the Ip and the Mac address, and you can just simply record and replay commands through the network.&#xD;
+Just simply get a cheap Broadlink rm mini 3, configure it with the Broadlink e-control app, get the Ip and the Mac address, and you can just simply record and replay Infrared commands through the network. (The device does not need internet access after it is configured through the App - just block the internet in your internet router if you want)&#xD;
 &#xD;
 Just send a message to the topic: "broadlink/some/naming/path" with the payload: "record" and the system is in recording mode.&#xD;
 To resend the IR-Code, just send to the topic "broadlink/some/naming/path" the payload "replay" and the Broadlink device will send the IR-Signal.&#xD;
 &#xD;
-For additional configuration you can create a custom.conf file, with additional parameter and link it here in the "Custom config file Path". It'll overrride the default values.</Overview>
+For additional configuration you can create a custom.conf file, with additional parameter and link it here in the "Custom config file Path". It'll override the default values.</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -24,13 +24,17 @@ For additional configuration you can create a custom.conf file, with additional 
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1686466026</DateInstalled>
+  <DateInstalled>1686469929</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="MQTT Host" Target="MQTT_SERVER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.1</Config>
+  <Config Name="MQTT Host" Target="MQTT_SERVER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.10</Config>
+  <Config Name="MQTT Port" Target="MQTT_PORT" Default="1883" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="MQTT User" Target="MQTT_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT Password" Target="MQTT_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT Topic" Target="MQTT_TOPIC_PREFIX" Default="broadlink" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">broadlink</Config>
   <Config Name="Broadlink Remote Device IP" Target="DEVICE_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.60</Config>
   <Config Name="Broadlink Remote Device Mac" Target="DEVICE_MAC" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">34:AA:FF:CC:D5:68</Config>
-  <Config Name="Broadlink Commands Folder" Target="/app/commands/" Default="/mnt/user/appdata/broadlink-mqtt/commands" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/broadlink-mqtt/commands</Config>
+  <Config Name="Broadlink Commands Folder" Target="/app/commands/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/broadlink-mqtt/commands</Config>
   <Config Name="Custom config file Path" Target="/app/custom.conf" Default="" Mode="rw" Description="If you have specific configuration parameter you need to add, just create a config file somewhere on your unraid system and link it here. It will override the default parameter." Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>
