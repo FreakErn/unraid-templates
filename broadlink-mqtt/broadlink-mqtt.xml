@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/140281-support-freakern-broadlink-mqtt-ir-bridge/<Support/>
+  <Support>https://forums.unraid.net/topic/140281-support-freakern-broadlink-mqtt-ir-bridge/</Support>
   <Project>https://github.com/eschava/broadlink-mqtt</Project>
   <Overview>A tool to send MQTT commands to control Infrared Devices.&#xD;
 &#xD;
